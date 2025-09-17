@@ -16,7 +16,7 @@ const masculino = true // Boolean (booleano) true ou false
 //array
 const frutas = ["Laranja", "Maçã", "Tangerina", "Uva"]
 
-console.log(frutas[0]) // Acessando o item do array pela posição (começa do 0)
+console.log(frutas[3]) // Acessando o item do array pela posição (começa do 0)
 
 //console.log("Meu nome é " + nome + " " + sobrenome + " e minha idade é " + idade + " anos.") // Concatenando variáveis com texto usando o +
 

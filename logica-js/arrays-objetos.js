@@ -19,12 +19,14 @@
     }
  ]
 
- //console.log(`O nome do usuário é ${alunosDoSenai[0].nome} e o nome da usuária é ${alunosDoSenai[1].nome}`)
+ console.log(`O nome do usuário é ${alunosDoSenai[0].nome} e o nome da usuária é ${alunosDoSenai[1].nome}`)
 
  console.log(`O nome do usuário é ${alunosDoSenai[2].nome}, o email do usuário é ${alunosDoSenai[2].email}, a matricula do usuário é ${alunosDoSenai[2].matricula} e a idade do usuário é ${alunosDoSenai[2].idade} anos.`)
 
  if(alunosDoSenai[2].idade < 18){
     console.log("MENOR DE IDADE. ACESSO NEGADO")
  }else{
-    console.log("MAIOR DE IDADE. ACESSO PERMITIDO")
+   console.log("MAIOR DE IDADE. ACESSO PERMITIDO")
  }
+
+ 

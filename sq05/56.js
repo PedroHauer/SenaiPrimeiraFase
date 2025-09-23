@@ -1,3 +1,4 @@
+
 let pontuacao = Number(prompt("Digite a pontuação do jogador: "))
 if (pontuacao<=10){
     alert("Deu ruim")

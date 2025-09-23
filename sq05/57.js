@@ -24,11 +24,23 @@
 // e apresente o valor final da conta e sua composicao (os detalhes,
 // pagamentos, descontos ... );
 
-//let diarias=Number(prompt("Digite o número de diárias: "))
-// if(diarias<=5){
-//     alert("Preço por diária: R$100,00")
-// }else if(diarias>=6 && diarias<=10){
-//     alert("Preço por diária: R$90,00")
-// }else if(diarias>=11){
-//     alert("Preço por diária: R$80,00")
-// }
+let dias 
+let valorDiaria
+let totalBruto
+let desconto10 
+let desconto15, multa=150, totalLiquido
+dias = Number(prompt("Quantos dias: "))
+if(dias<=5){
+    valorDiaria = 100
+}else if(dias<=10){
+    valorDiaria = 90
+}else{
+    valorDiaria = 80
+}
+
+totalBruto = dias * valorDiaria
+desconto10 = totalBruto * 10/100
+desconto15 = totalBruto * 15/100
+totalLiquido = totalBruto - (desconto10 + desconto15)+ multa
+
+alert("Número de dias:" + dias + "\nValor da diária: R$" + valorDiaria.toFixed(2) + "\nTotal bruto: R$" + totalBruto.toFixed(2) + "\nDesconto especial: R$" + desconto10.toFixed(2) + "\nDesconto convênio: R$" + desconto15.toFixed(2) + "\nMulta: R$" + multa.toFixed(2) + "\n=============" + "\nTotal a pagar: R$" + totalLiquido.toFixed(2).replace(".",","))

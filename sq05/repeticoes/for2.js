@@ -36,14 +36,33 @@
 
 //EX 03 nn entendi 
 
-// for(let i=1;i<=100;i++){
-//     let soma = 0
-//     soma = soma + i
-//     alert(soma)
-// }
 
-// //EX 04 Imprima a tabuada do 5.
+
+
+
+
+
+
+
+
+
+
+
+//EX 04 Imprima a tabuada do 5.
 // for(let i=1;i<=10;i++){
 //     alert(`5 x ${i} = ${5*i}`)
 
+// }
+
+//EX 05 Altere o programa anterior para fornecer a tabuada do número que o usuário pedir.
+// let num = Number(prompt("Digite um número para ver a tabuada:"))
+// for(let i=1;i<=10;i++){
+//     alert(`${num} x ${i} = ${num*i}`)
+// }
+
+//EX 06 Mostre os números ímpares de 1 a 20.
+// for(let i=1;i<=20;i++){
+//    if(i%2 == 1){
+//     alert(i)
+//    }
 // }

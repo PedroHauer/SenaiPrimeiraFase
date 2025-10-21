@@ -1,0 +1,12 @@
+#formLogin{
+    background-color: rgb(116, 152, 152);
+    width: 50%;
+    
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}

@@ -1,0 +1,12 @@
+/* * {} */
+
+button {
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
+
+#btCadastrar{
+    color: blueviolet;
+}

@@ -23,7 +23,7 @@ a {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  
 }
 
 nav {
@@ -90,6 +90,9 @@ main {
     }
 
     &#economia {
+      .container{
+        flex-wrap: wrap;
+      }
       article{
         width: 300px;
       }

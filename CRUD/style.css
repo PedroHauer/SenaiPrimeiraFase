@@ -1,0 +1,24 @@
+#formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    background-color: aqua;
+    padding: 10px;
+    
+}
+
+button:hover{
+    /* background-color: blue; */
+    scale: 1.05;
+}
+
+#painelDinos{
+   
+   margin-top: 25px; 
+   background-color: aquamarine;
+    min-height: 30px;
+}

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CRUD</title>
 </head>
-
 <body>
     <h1>CRUDino</h1>
     <div id="formContainer">
@@ -18,17 +16,23 @@
         <button onclick="cadastrarDino()">Cadastrar</button>
     </div>
 
+    <div onclick="testar">Testar</div>
+    
     <div id="painelDinos">
-
         <h2>Painel de dinos</h2>
-        <button onclick="mostrarTodosDinos()">Mostrar Dinos</button>
         <div id="listaDinos">
             Lista de dinos
         </div>
+        
+        <button onclick="lancarMeteoro()">✊</button>
+    </div>
+    
+    <div id="loucuras">
+        <a href="dois.html">Dois</a>
+        <button onclick="navegarParaDois()">Dois</button>
 
     </div>
-
+    
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -5,17 +5,22 @@
 //     altura: '6'
 // }
 
-const dinossauros = []
+const dinossauros = JSON.parse(localStorage.getItem("dinossauros")) || []
+
 
 // dinossauros.push(dinossauro)
 
 // document.getElementById('dino').innerHTML = `Nome: ${dinossauros[0].nome}; Altura: ${dinossauros[0].altura}`
 
 function cadastrarDino() {
+
+    let dinossauros = JSON.parse(localStorage.getItem("dinossauros")) || []
+
     let nomeLido = document.getElementById('inputNome').value
     let alturaLida = Number(document.getElementById('inputAltura').value)
 
     const dino = {
+        id: Date.now(),
         nome: nomeLido,
         altura: alturaLida
     }
@@ -23,8 +28,15 @@ function cadastrarDino() {
 
     console.log(dinossauros);
 
+    // let dinossaurosTexto = JSON.stringify(dinossauros)
+    // localStorage.setItem("dinossauros", dinossaurosTexto)
+
+    localStorage.setItem("dinossauros", JSON.stringify(dinossauros))
+
     limparForm()
     alert("Dino cadastrado com sucesso!")
+
+    mostrarTodosDinos()
 
 }
 
@@ -37,13 +49,59 @@ function limparForm() {
 }
 
 function mostrarTodosDinos() {
-  document.getElementById('listaDinos').innerHTML = ''
-    for(let i=0; i<dinossauros.length ;i++){
-
+    document.getElementById('listaDinos').innerHTML = ''
+    for (let i = 0; i < dinossauros.length; i++) {
         // console.log(i);
-         document.getElementById('listaDinos').innerHTML += ` Nome: ${dinossauros[i].nome} Altura: ${dinossauros[i].altura} <br>`
+        document.getElementById('listaDinos').innerHTML += `
+            <div class='card'>
+                <h3>${dinossauros[i].nome} </h3>
+                <p>Altura: ${dinossauros[i].altura}</p>
+                <p>ID: ${dinossauros[i].id}</p>
+                <button onclick="editarDino()">💕</button>
+                </div>
+        `
+
     }
 }
-    
 
-// document.getElementById('painelDinos').innerHTML = 'Teste'
+function lancarMeteoro() {
+    dinossauros.length = 0
+    mostrarTodosDinos()
+}
+
+function navegarParaDois() {
+    // alert('Tchau')
+
+    let nome = prompt("User:")
+    let senha = prompt("Senha: ")
+
+    if (nome == "admin" && senha == "admin") {
+        window.location.href = 'dois.html'
+    } else {
+        alert("Você está tentando invadir, a polícia tá chegando!!")
+    }
+
+}
+
+function testar(id) {
+
+    for (let i = 0; i < dinossauros.length; i++) {
+        if (dinossauros[i].id == id) {
+            console.log(dinossauros[i]);
+        }
+
+    }
+
+}
+
+function editarDino(id) {
+    console.log(id);
+
+    for (let i = 0; i < dinossauros.length; i++) {
+        if (dinossauros[i].id == id) {
+            console.log(dinossauros[i]);
+            document.getElementById('inputNome').value = dinossauros[i].nome
+            document.getElementById('inputAltura').value = dinossauros[i].altura
+        }
+    }
+}
